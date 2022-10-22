@@ -1,0 +1,179 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+// Load keystore
+// Create a variable called keystorePropertiesFile, and initialize it to your
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("signing.properties")
+// Initialize a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+// Load your keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    repositories {
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/LICENSE-LGPL-2.1.txt', 'META-INF/LICENSE-LGPL-3.txt', 'META-INF/LICENSE-W3C-TEST', 'META-INF/DEPENDENCIES']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = 11
+    }
+
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+    }
+
+    compileSdkVersion 33
+    buildToolsVersion '33.0.0'
+
+    defaultConfig {
+        applicationId "ac.mdiq.menslingua"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion 33
+
+        versionCode 175
+        versionName '1.0.1'
+//        multiDexEnabled true
+        setProperty("archivesBaseName", "MensLingua-" + defaultConfig.versionName)
+    }
+
+    signingConfigs {
+//        debug {
+//            v1SigningEnabled true
+//            v2SigningEnabled true
+//
+//            // Add debug keystore credentials here
+//        }
+
+        release {
+//            if (keystoreProperties['storeFile']) {
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+                v1SigningEnabled true
+                v2SigningEnabled true
+//            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            applicationIdSuffix '.D'
+            manifestPlaceholders = [appName: "MensLingua-D"]
+            testCoverageEnabled (project.hasProperty('coverage'))
+            ext.enableCrashlytics = false
+            ext.alwaysUpdateBuildId = false
+        }
+
+        debugK {
+            initWith(buildTypes["debug"])
+            debuggable true
+            minifyEnabled false
+            applicationIdSuffix '.K'
+            manifestPlaceholders = [appName: "MensLingua-K"]
+            testCoverageEnabled (project.hasProperty('coverage'))
+            ext.enableCrashlytics = false
+            ext.alwaysUpdateBuildId = false
+        }
+
+        release {
+            manifestPlaceholders = [appName: "Mens Lingua"]
+            signingConfig signingConfigs.release
+
+            debuggable true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lint {
+        abortOnError false
+        checkDependencies true
+        checkReleaseBuilds false
+        disable 'TypographyFractions', 'TypographyQuotes'
+        enable 'RtlHardcoded', 'RtlCompat', 'RtlEnabled'
+        quiet true
+        warningsAsErrors true
+    }
+    namespace 'ac.mdiq.menslingua'
+
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+//    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'  // seems not compatible with Java 11
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.browser:browser:1.4.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.preference:preference-ktx:1.2.0'
+
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.activity:activity-compose:1.5.1'
+
+    implementation 'com.google.accompanist:accompanist-flowlayout:0.25.1'
+
+    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
+
+    implementation 'androidx.paging:paging-compose:1.0.0-alpha16'
+
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.material:material:1.2.1"
+
+    implementation 'androidx.navigation:navigation-compose:2.5.2'
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    implementation 'com.vladsch.flexmark:flexmark-all:0.64.0'
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation 'org.jetbrains:annotations:23.0.0'
+    implementation 'org.apache.commons:commons-text:1.9'
+
+    implementation 'org.greenrobot:eventbus:3.3.1'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
+    debugImplementation("io.objectbox:objectbox-android-objectbrowser:$objectboxVersion")
+    debugKImplementation("io.objectbox:objectbox-android-objectbrowser:$objectboxVersion")
+
+    releaseImplementation("io.objectbox:objectbox-android:$objectboxVersion")
+
+    implementation 'com.opencsv:opencsv:5.7.0'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.github.HBiSoft:PickiT:0.1.14'
+}
+
+apply plugin: 'io.objectbox'
+apply plugin: 'kotlin-android'
+repositories {
+    mavenCentral()
+}
+// Apply last.
+
+

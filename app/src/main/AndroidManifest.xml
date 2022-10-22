@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Leo X Jia on 8/12/20, 9:05 PM
+  ~ leoxjia@gmail.com
+  ~ Last modified 11/29/21, 5:53 PM
+  ~ Copyright (c) 2020.
+  ~ All rights reserved.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.screen.portrait" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+        <intent>
+            <action android:name=
+                "android.support.customtabs.action.CustomTabsService" />
+        </intent>
+    </queries>
+
+    <application
+            android:name="ac.mdiq.menslingua.general.Application"
+            android:icon="@mipmap/ic_launcher"
+            android:label="${appName}"
+            android:supportsRtl="true"
+            android:theme="@style/AppThemeNoActionBar"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:largeHeap="true"
+            android:allowBackup="false">
+
+        <activity
+            android:name="ac.mdiq.menslingua.packs.DisciplineActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="ac.mdiq.menslingua.packs.DisciplinesActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.packs.LanguagesActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.packs.LanguageActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.packs.CoursesActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.packs.CourseActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.schedules.JournalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".quizes.EPQuizActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".quizes.ESQuizActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".quizes.ShuffleSQuizActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".quizes.ShufflePQuizActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".quizes.EWSQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".quizes.EWPQuizActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".quizes.EEPQuizActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".quizes.EESQuizActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".quizes.WWQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".quizes.MMWQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".quizes.MMPQuizActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".quizes.MMSQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".quizes.QuizReviewActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.elements.SentencesActivity"
+            android:exported="false" />
+        <activity
+            android:name="ac.mdiq.menslingua.elements.PhrasesActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.elements.SentenceInfoActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.elements.PhraseInfoActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.elements.SentenceEditActivity"
+            android:exported="true"
+            android:label="Sentence">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ac.mdiq.menslingua.elements.PhraseEditActivity"
+            android:exported="true"
+            android:label="Phrase">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ac.mdiq.menslingua.elements.ArticleActivity"
+            android:exported="false"
+            android:label="Article">
+        </activity>
+        <activity
+            android:name="ac.mdiq.menslingua.elements.WordsActivity"
+            android:exported="false" />
+        <activity
+            android:name="ac.mdiq.menslingua.elements.WordDetailsActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.elements.WordEditActivity"
+            android:exported="true"
+            android:label="Word">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ac.mdiq.menslingua.schedules.StatsActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.profiles.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="ac.mdiq.menslingua.services.ServicesActivity"
+            android:exported="false" />
+        <activity
+            android:name="ac.mdiq.menslingua.services.DisciplineServices"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.general.HtmlActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.general.HelpActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ac.mdiq.menslingua.services.SettingsActivity"
+            android:exported="false"/>
+    </application>
+
+</manifest>
