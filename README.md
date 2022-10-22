@@ -31,7 +31,7 @@ Colors of words, phrases, and sentences represent levels of ease.  Dark green ba
 
 ## How effective
 
-I used the app to learn French for 1.5 years as I was developing it.  As people knowing me commented: "you knew very little French in the beginning, and now you can basically communicate with with us.  Bravo!".  That's very true, but what they don't know much is that my reading comprehension is alreaady in advanced levels.  I have now read about 10 French books, include (note these are not children's books nor easy books for foreigners):
+I used the app to learn French for 1.5 years as I was developing it.  As people knowing me commented: "you knew very little French in the beginning, and now you can basically communicate with with us.  Bravo!".  That's very true, but what they don't know much is that my reading comprehension is alreaady in advanced levels.  I have now read about 10 French books, including (note these are not children's books nor easy books for foreigners):
 
 * L'Étranger by Albert Camus, 150+ pages
 * Mort d'une héroïne rouge by Xiaolong Qiu, 500~ pages
