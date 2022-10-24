@@ -27,7 +27,7 @@ More importantly, rather than only for memorizing the materials given, MensLingu
 <img src="./Images/NTS.jpg" width="238" /> <img src="./Images/Journals.jpg" width="238" /> 
 <img src="./Images/Charts.jpg" width="238" /> <img src="./Images/Chart.jpg" width="238" /> 
 
-## What are the colors?
+## What are the colors
 
 Colors of words, phrases, and sentences represent levels of ease.  Dark green background color is for the best comfort of the eyes.
 
