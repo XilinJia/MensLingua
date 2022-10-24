@@ -12,9 +12,11 @@ The way to learn is mainly by going through various types of quizzes.  You can s
 
 ## How is it different from apps like Anki
 
-"Anki is a program which makes remembering things easy."
+"Anki is a program which makes remembering things easy".  There are quite a few apps very similar to Anki for learning languages.
 
-While MensLingua covers Anki's functionality on languages (rather than all things), MensLingua focuses more on the full comprehension of an entire language, rather than only memorizing words.
+On learning languages (rather than all things), while MensLingua covers Anki's functionality by automatically scheduling learning based on level of ease, the mode of operation is different.  Anki relies on the user to set the level of ease on each element and MensLingua also provides interfaces for the user to do so, but during regluar learning, MensLingua doesn't trust the user's feeling on the level of ease with the element, and rather, the user has to pass a quiz of various kinds to demonstrate his knowledge in order for MensLingua to properly set the right schedule.
+
+More importantly, rather than only for memorizing the materials given, MensLingua focuses more on the full comprehension of an entire language by exploiting the full interrelations of the materials and picking the user from various angles.
 
 ## Screenshots
 
