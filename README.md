@@ -6,9 +6,13 @@ MensLingua is a powerful Android app guiding the learning and perfecting of skil
 
 ## How it works
 
-When getting started, you open/create a discipline, for instance English:French discipline for learning French from English.  You can import (at any time) various materials into a discipline: anki files, csv files, text, or even articles from the Internet.  Any material imported into a discipline will be intelligently put into the study plan with interrelations constructed.  MensLingua's study plan is defined by special algorithms that tracks your combined learning of words, phrases, and sentences so that efficiency and effectiveness are achieved.  Then you simply follow the plans MensLingua sets for you.  As you study, interrelations of the materials are further enriched.
+When getting started, you open/create a discipline, for instance English:French discipline for learning French from English.  You can import (at any time) various materials into a discipline: anki files, csv files, text, or even articles from the Internet.  Any material imported into a discipline will be intelligently sorted and added into the study plan with interrelations constructed.  MensLingua's study plan is defined by special algorithms that tracks your combined learning of words, phrases, and sentences so that efficiency and effectiveness are achieved.  Then you simply follow the plans MensLingua sets for you.  As you study, interrelations of the materials are further enriched.
 
 The way to learn is mainly by going through various types of quizzes.  You can see your progress in charts and in journal.
+
+For prononciation, if your material includes audio, then the audio be played, otherwise, the default text-to-speech engine of your phone is used.  The app also includes easy access to online dictionary and online image searches for words and phrases.  And certainly it allows you to use any off-line dictionaries.
+
+But the app doesn't include grammar material for your study, you will need to study it elsewhere.
 
 ## How is it different from apps like Anki
 
