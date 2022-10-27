@@ -1,8 +1,8 @@
 # MensLingua
 
-MensLingua is a powerful Android app guiding the learning and perfecting of skills of either one's native language or a foreign language.  Unlike many apps for entry level learnings, MensLingua aims to bring one's skills to advanced levels effectively in a relatively short period of time.
+MensLingua is a powerful Android app guiding the learning and perfecting of language skills, either native or foreign.  Unlike many apps for entry level learnings, MensLingua aims to bring one's skills to advanced levels effectively in a relatively short period of time.
 
-"mens lingua" in latin means language of the mind.
+> "mens lingua" in latin means language of the mind.
 
 ## How it works
 
