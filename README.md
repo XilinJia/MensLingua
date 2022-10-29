@@ -22,6 +22,8 @@ On learning languages (rather than all things as Anki does), while MensLingua co
 
 More importantly, rather than only for memorizing the materials given, MensLingua focuses more on the full comprehension of an entire language by exploiting the interrelations of the materials and piquing the user from various angles.
 
+Another clear advantage is that the algorithms in MensLingua allow the user continue moving forward even when there is already a large pool of learned material, a situation where with many other apps the user would be totally burdened even depressed everyday by the endless reviews of old material.  As of now, I have of French words 14026 Done, 15108 Easy, and 132 Hard, and my daily words to review is about 400, which is an easy task given the smart algorithm.
+
 ## Screenshots
 
 <img src="./Images/FE.jpg" width="238" /> <img src="./Images/DE.jpg" width="238" /> 
