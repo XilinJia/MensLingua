@@ -1,3 +1,10 @@
+/*
+ * Created by Xilin Jia on 9/11/20, 8:51 PM
+ * https://github.com/XilinJia
+ * Last modified 3/11/22, 8:51 PM
+ * Copyright (c) 2020.
+ * All rights reserved.
+ */
 package ac.mdiq.menslingua.general
 
 import androidx.compose.material.darkColors
